@@ -79,7 +79,7 @@ public class StartGame extends AppCompatActivity {
 
         }
         if (!(team_1 == 0 & team_2 == 0)){
-            speech.speak(MessageFormat.format("Счёт, {0}, {1}", str_num_1, str_num_2), TextToSpeech.QUEUE_FLUSH, null, "id1");
+            speech.speak(MessageFormat.format(" {0}, {1}", str_num_1, str_num_2), TextToSpeech.QUEUE_FLUSH, null, "id1");
         }
 
     }
@@ -113,7 +113,7 @@ public class StartGame extends AppCompatActivity {
             num_2.setText(str_num_2);
         }
         if (!(team_1 == 0 & team_2 == 0)){
-            speech.speak(MessageFormat.format("Счёт, {1}, {0}", str_num_1, str_num_2), TextToSpeech.QUEUE_FLUSH, null, "id1");
+            speech.speak(MessageFormat.format(" {1}, {0}", str_num_1, str_num_2), TextToSpeech.QUEUE_FLUSH, null, "id1");
         }
     }
 

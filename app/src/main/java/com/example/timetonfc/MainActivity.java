@@ -9,11 +9,12 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     Button StartGame;
+    Button writeNfc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button StartGame= (Button) findViewById(R.id.button2);
+        this.StartGame = findViewById(R.id.button2);
         StartGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -21,7 +22,17 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(intent);
             }
         });
+        this.writeNfc = findViewById(R.id.button);
+        writeNfc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, WriteFnc.class);
+                MainActivity.this.startActivity(intent);
+            }
+        });
     }
+
+
 
 
 }
